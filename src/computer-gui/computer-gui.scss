@@ -1,0 +1,58 @@
+.screen {
+  font-family: monospace;
+  color: white;
+  font-size: 1vmax;
+  width: 100%;
+  height: 100%;
+}
+
+.boot-screen {
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .loading-msg {
+    animation: fadein 1.5s ease-in 1;
+    margin-bottom: 2%;
+  }
+
+  .loading-bar {
+    animation: fadein 1.5s ease-in 1;
+    width: 30%;
+    height: 5%;
+    border: 1px solid white;
+    .progress {
+      height: 100%;
+      background-color: white;
+    }
+  }
+
+  &.done {
+    animation: fadeout 1s ease-in 1;
+    animation-fill-mode: forwards;
+  }
+}
+
+@keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeout {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}

@@ -1,8 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import { App } from './App';
+import { DeskScene } from './DeskScene';
 
 import './app.scss';
 
-ReactDOM.render(<App />, document.getElementById('app-root'));
+ReactDOM.render(<DeskScene />, document.getElementById('app-root'));
